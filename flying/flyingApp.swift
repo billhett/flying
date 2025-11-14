@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct flyingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AircraftListView()
+                .modelContainer(for: [Aircraft.self, Flight.self])
         }
     }
 }
